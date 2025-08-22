@@ -278,7 +278,7 @@ export default function BillSplitter() {
               </button>
               <button
                 onClick={addFriend}
-                className="px-3 py-1 bg-green-500 text-white rounded-lg"
+                className="px-3 py-1 bg-orange-500 text-white rounded-lg"
               >
                 Save
               </button>
