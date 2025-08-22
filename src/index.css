@@ -1,0 +1,21 @@
+@import "tailwindcss";
+fds{
+  background-color: #ffa6003a;
+}
+
+.card {
+  overflow-y: scroll; /* yoki auto */
+}
+
+/* Chrome, Safari va Edge */
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.card{
+  scrollbar-width: none;
+}
+button{
+  cursor: pointer;
+}
