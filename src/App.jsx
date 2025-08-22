@@ -135,7 +135,7 @@ export default function BillSplitter() {
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="mt-4 w-full bg-green-500 text-white py-2 rounded-lg shadow"
+          className="mt-4 w-full bg-orange-500 text-white py-2 rounded-lg shadow"
         >
           + Add Friend
         </button>
@@ -152,7 +152,6 @@ export default function BillSplitter() {
             animate={{ scale: 1, opacity: 1 }}
             className="bg-white p-6 rounded-2xl shadow-xl w-96 relative"
           >
-            {/* Close Button */}
             <button
               onClick={() => setSelectedFriend(null)}
               className="absolute top-3 right-3 text-orange-600 text-xl"
@@ -160,12 +159,11 @@ export default function BillSplitter() {
               <FaTimes />
             </button>
 
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-orange-700">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-orange-600">
               <FaUserFriends /> Split a bill with {selectedFriend.name}
             </h2>
 
             <label className="block mb-2">
-              {" "}
               <FaMoneyBillWave className="inline" /> Bill value
             </label>
             <input
@@ -207,7 +205,6 @@ export default function BillSplitter() {
             </select>
 
             <label className="block mb-2 flex items-center gap-2">
-              {" "}
               <RiExchangeDollarLine /> Currency
             </label>
             <select
@@ -240,7 +237,6 @@ export default function BillSplitter() {
         </motion.div>
       )}
 
-      {/* Add Friend Modal */}
       {showAddModal && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -263,12 +259,7 @@ export default function BillSplitter() {
               className="w-full p-2 border rounded mb-3"
             />
             <input type="file" accept="image/*" onChange={handleFileChange} />
-            {newFriendImg && (
-              <img
-                src={newFriendImg}
-                alt="preview"
-              />
-            )}
+            {newFriendImg && <img src={newFriendImg} alt="preview" />}
             <div className="flex justify-between mt-4">
               <button
                 onClick={() => setShowAddModal(false)}
